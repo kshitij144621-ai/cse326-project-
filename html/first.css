@@ -1,0 +1,64 @@
+
+/* Body Design */
+body {
+    font-family: Arial;
+    background-color: #f2f4f8;
+    margin: 20px;
+}
+
+/* Main Heading */
+header {
+    text-align: center;
+    color: #343c43;
+}
+
+/* Form Box */
+fieldset {
+    width: 350px;
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #598C74;
+    border-radius: 10px;
+}
+
+/* Legend */
+legend {
+    color: #598C74;
+    font-weight: bold;
+}
+
+/* Headings */
+h2 {
+    font-size: 18px;
+    color: #343c43;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* OR Text */
+p {
+    text-align: center;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #598C74;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Button Hover */
+input[type="submit"]:hover {
+    background-color: #343c43;
+}

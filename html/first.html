@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait List</title>
+
+    <link rel="stylesheet" href="first.css">
+    <script src="first.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>WAIT LIST</h1>
+    </header>
+
+    <hr>
+
+    <fieldset>
+        <legend>WAIT LIST FORM</legend>
+
+        <form id="waitForm">
+
+            <h2>NAME</h2>
+            <input type="text" id="name"
+                   placeholder="ENTER NAME" required>
+
+            <h2>MOBILE.NO</h2>
+            <input type="tel" id="mobile"
+                   placeholder="ENTER MOBILE NO">
+
+            <p>OR</p>
+
+            <input type="email" id="email"
+                   placeholder="ENTER EMAIL">
+
+            <h2>Priority Level</h2>
+            <select id="priority" required>
+                <option value="">Select Priority</option>
+                <option value="urgent">Urgent</option>
+                <option value="normal">Normal</option>
+                <option value="vip">VIP</option>
+            </select>
+
+            <h2>Appointment Details</h2>
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+
+            <input type="submit" value="SUBMIT">
+
+        </form>
+    </fieldset>
+
+</body>
+</html>
