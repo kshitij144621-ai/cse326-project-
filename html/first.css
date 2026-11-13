@@ -4,6 +4,12 @@ body {
     font-family: Arial;
     background-color: #f2f4f8;
     margin: 20px;
+    background-image: url("hospital.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
 }
 
 /* Main Heading */
