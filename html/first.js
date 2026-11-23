@@ -1,44 +1,29 @@
+// This code runs when the patient submits the form.
 
-// Step 1: Select Form
-let form = document.getElementById("waitForm");
-
-// Step 2: Submit Event
-form.addEventListener("submit", function(event) {
-
+document.getElementById("patientForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // Step 3: Get Input Values
-    let name = document.getElementById("name").value;
-    let mobile = document.getElementById("mobile").value;
-    let email = document.getElementById("email").value;
-    let priority = document.getElementById("priority").value;
-    let date = document.getElementById("date").value;
-    let time = document.getElementById("time").value;
+    // Get the information entered by the patient.
+    const patient = {
+        name: document.getElementById("patientName").value,
+        gender: document.getElementById("gender").value,
+        age: document.getElementById("age").value,
+        phone: document.getElementById("phone").value,
+        ageUnit: document.getElementById("ageUnit").value,
+        area: document.getElementById("area").value,
+        doctor: document.getElementById("doctor").value,
+        date: document.getElementById("appointmentDate").value,
+        time: document.getElementById("appointmentTime").value
+    };
 
-    // Step 4: Check Contact
-    if (mobile === "" && email === "") {
-        alert("Enter Mobile Number or Email");
-        return;
-    }
+    // Save the patient information in the browser.
+    let patients = JSON.parse(localStorage.getItem("patients")) || [];
+    patients.push(patient);
+    localStorage.setItem("patients", JSON.stringify(patients));
 
-    // Step 5: Check Mobile Number
-    if (mobile !== "" && !/^[0-9]{10}$/.test(mobile)) {
-        alert("Enter Valid 10 Digit Mobile Number");
-        return;
-    }
+    // Create an enquiry number and open the confirmation page.
+    const enquiryId = Math.floor(1000 + Math.random() * 9000);
+    localStorage.setItem("lastEnquiryId", enquiryId);
 
-    // Step 6: Success Message
-    alert("Form Submitted Successfully!");
-
-    // Step 7: Print Data
-    console.log("Name:", name);
-    console.log("Mobile:", mobile);
-    console.log("Email:", email);
-    console.log("Priority:", priority);
-    console.log("Date:", date);
-    console.log("Time:", time);
-
-    // Step 8: Clear Form
-    form.reset();
-
+    window.location.href = "success.html";
 });
