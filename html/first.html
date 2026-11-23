@@ -1,57 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wait List</title>
-
-    <link rel="stylesheet" href="first.css">
-    <script src="first.js" defer></script>
+    <title>Patient Appointment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="top-bar"></div>
 
-    <header>
-        <h1>WAIT LIST</h1>
-    </header>
+    <main class="form-card">
+        <div class="heading">
+            <p>PATIENT</p>
+            <h1>APPOINTMENT</h1>
+            <h1>LPU⭐</h1>
+            
+        </div>
 
-    <hr>
+        <form id="patientForm">
+            <div class="form-group">
+                <label for="patientName">Patient Name</label>
+                <input type="text" id="patientName" placeholder="Enter Patient Name"
+                       maxlength="40" required>
+            </div>
 
-    <fieldset>
-        <legend>WAIT LIST FORM</legend>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="Male">male</option>
+                    <option value="Female">female</option>
+                    <option value="Other">other</option>
+                </select>
+            </div>
 
-        <form id="waitForm">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Age" min="1" max="120" required>
+            </div>
 
-            <h2>NAME</h2>
-            <input type="text" id="name"
-                   placeholder="ENTER NAME" required>
+            <div class="form-group">
+                <label for="phone">Phone No.</label>
+                <input type="tel" id="phone" placeholder="Mobile No."
+                       maxlength="10" minlength="10" pattern="[0-9]{10}" required>
+            </div>
 
-            <h2>MOBILE.NO</h2>
-            <input type="tel" id="mobile"
-                   placeholder="ENTER MOBILE NO">
+            <div class="form-group">
+                <label for="ageUnit">Age Unit</label>
+                <select id="ageUnit" required>
+                    <option value="Years">Years</option>
+                    <option value="Months">Months</option>
+                    <option value="Days">Days</option>
+                </select>
+            </div>
 
-            <p>OR</p>
+            <div class="form-group">
+                <label for="area">Area</label>
+                <input type="text" id="area" placeholder="Enter Area" required>
+            </div>
 
-            <input type="email" id="email"
-                   placeholder="ENTER EMAIL">
+            <div class="form-group">
+                <label for="doctor">Doctor</label>
+                <select id="doctor" required>
+                    <option value="">Select Doctor</option>
+                    <option>Dr. Meera Shah</option>
+                    <option>Dr. Neha Kapoor</option>
+                    <option>Dr. Ahmad</option>
+                    <option>Dr. vikas Shah</option>
+                    <option>Dr. karan singh</option>
+                    <option>Dr.suraj </option>
+                </select>
+            </div>
 
-            <h2>Priority Level</h2>
-            <select id="priority" required>
-                <option value="">Select Priority</option>
-                <option value="urgent">Urgent</option>
-                <option value="normal">Normal</option>
-                <option value="vip">VIP</option>
-            </select>
+            <div class="form-group">
+                <label for="appointmentDate">Appointment Date</label>
+                <input type="date" id="appointmentDate" required>
+            </div>
 
-            <h2>Appointment Details</h2>
-            <input type="date" id="date" required>
-            <input type="time" id="time" required>
+            <div class="form-group">
+                <label for="appointmentTime">Appointment Time</label>
+                <input type="time" id="appointmentTime" required>
+            </div>
 
-            <input type="submit" value="SUBMIT">
-
+            <button type="submit">SUBMIT</button>
         </form>
-    </fieldset>
+    </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
